@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Inspection Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vehicle Inspection Checklist</h1>
+        <form id="checklistForm">
+            <label for="drivingLicense">Driving License:</label>
+            <input type="text" id="drivingLicense" required>
+
+            <label for="region">Region:</label>
+            <input type="text" id="region" required>
+
+            <label for="sar">SAR:</label>
+            <input type="text" id="sar" required>
+
+            <label for="medical">Medical:</label>
+            <input type="text" id="medical" required>
+
+            <label for="ddt">DDT:</label>
+            <input type="text" id="ddt" required>
+            <label>Attach Document:</label>
+            <input type="file" accept=".pdf,.doc,.docx,.jpg,.png">
+
+            <h2>Daily Inspections</h2>
+
+            <div class="inspection-item">
+                <h3>OIL LEVEL</h3>
+                <label>Hydraulic:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Engine:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Transmission:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>LIGHTS</h3>
+                <label>Brake:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Park:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Head:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Indicator:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Hazards:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>WINDSCREEN</h3>
+                <label>Screen:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Wipers:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Wiper Rubber:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Wiper Water Spray:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>BATTERY</h3>
+                <label>Terminals:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Water:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>STEERING</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>TYRES</h3>
+                <label>Tires:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Nuts/Studs:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Pressure:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Spare:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>LOAD BIN</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>HOOTER</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>RADIATOR</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>OIL LEAKS</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>AIR LEAKS</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>DRAINS</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>DIFFERENTIALS</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>MIRRORS</h3>
+                <label>Status:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+            </div>
+
+            <div class="inspection-item">
+                <h3>SAFETY</h3>
+                <label>Fire Extinguisher:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>First Aid Kit:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Emergency Triangle:</label> <input type="text" placeholder="OK/X/N/A">
+                <label>Attach Image:</label> <input type="file" accept="image/*">
+                <button type="button" onclick="takePicture()">Take Picture</button>
+
+                <label>Additional Observations:</label>
+                <textarea placeholder="Notes..."></textarea>
+            </div>
+
+            <button type="button" onclick="generatePDF()">Generate PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
